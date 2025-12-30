@@ -1,0 +1,23 @@
+CONCLUSIONES
+
+El presente repositorio permitió validar un flujo End-to-End (E2E) de compra en la aplicación web SauceDemo, cubriendo desde la autenticación del usuario hasta la confirmación final de la orden, cumpliendo completamente con los requerimientos planteados en el challenge.
+
+Para la implementación se utilizó :
+1) Serenity BDD con el patrón Screenplay, lo cual permitió modelar el comportamiento del usuario de manera clara, legible y mantenible, separando responsabilidades entre actores, tareas y elementos de la interfaz.
+
+Este enfoque facilita la escalabilidad del proyecto y la reutilización de componentes ante futuros escenarios de prueba.
+
+2) Cucumber, para facilitar en un lenguaje
+
+El flujo de agregado de productos se realizó directamente desde la vista de inventario, al tratarse del camino más corto y representativo del “happy path” de compra.
+Esta decisión reduce la complejidad del escenario, mejora la estabilidad de la automatización y cumple con el objetivo principal del ejercicio.
+Flujos alternativos como la navegación al detalle de cada producto antes de agregarlo al carrito, podrían cubrirse en escenarios adicionales, pero se consideraron fuera del alcance de esta prueba.
+
+Se utilizó Gradle Wrapper para la gestión del ciclo de vida del proyecto, garantizando que cualquier evaluador pueda ejecutar las pruebas sin necesidad de instalar Gradle de forma manual.
+Asimismo, el uso de WebDriverManager permite una gestión automática del driver del navegador, evitando configuraciones adicionales en la máquina local.
+
+Las validaciones se realizaron mediante la clase Ensure de Screenplay, lo cual permite generar reportes más legibles y detallados, alineados con las buenas prácticas actuales de Serenity BDD.
+El reporte HTML generado al finalizar la ejecución proporciona evidencia clara de cada paso del flujo, facilitando el análisis de resultados.
+
+Como mejora futura, el proyecto podría ampliarse incorporando escenarios negativos, validaciones adicionales sobre los datos de compra, ejecución en múltiples navegadores y parametrización de ambientes.
+No obstante, la solución actual cumple de forma correcta y profesional con el alcance solicitado en el challenge.

@@ -1,15 +1,16 @@
 
 # 🛒 SauceDemo Automation Challenge - E2E
 
-Este repositorio contiene la solución automatizada para el flujo de compra End-to-End (E2E) en la tienda virtual **SauceDemo**. El proyecto ha sido implementado utilizando el patrón de diseño **Screenplay** con **Serenity BDD**, **Cucumber** y **Gradle**.
+Este repositorio contiene la automatización para el flujo de compra End-to-End (E2E) en la tienda virtual **SauceDemo**. 
+El proyecto ha sido implementado utilizando el patrón de diseño **Screenplay** con **Serenity BDD**, **Cucumber** y **Gradle**.
 
-## 🛠️ Tech Stack
+## 🛠️ Stack Tecnológico 
 
 * **Lenguaje:** Java 17 (Oracle OpenJDK)
 * **Framework:** Serenity BDD (Screenplay Pattern)
 * **BDD:** Cucumber (Gherkin)
-* **Build Tool:** Gradle 7.6
-* **Driver Management:** WebDriverManager (Bonigarcia) - *Gestión automática de drivers*
+* **Build Tool:** Gradle 7.6 (Wrapper)
+* **Driver Management:** WebDriverManager - *Gestión automática de drivers*
 * **IDE:** IntelliJ IDEA Community/Ultimate
 
 ## 📋 Prerrequisitos
@@ -24,7 +25,7 @@ Para ejecutar este proyecto localmente, asegúrate de cumplir con los siguientes
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone <URL_DE_TU_REPOSITORIO>
+    git clone git@github.com:devTato1/sauce-demo-challenge.git
     ```
 
 2.  **Acceder al directorio:**
@@ -36,7 +37,7 @@ Para ejecutar este proyecto localmente, asegúrate de cumplir con los siguientes
     Ejecuta el comando de Gradle para bajar las librerías necesarias.
     * **Windows:**
         ```bash
-        gradlew clean build
+        .\gradlew clean build
         ```
     * **Mac/Linux:**
         ```bash
@@ -50,7 +51,7 @@ El proyecto está configurado para ejecutarse en **Firefox** y gestionar automá
 Para ejecutar los escenarios de prueba y generar los reportes, corre el siguiente comando en la terminal:
 
 ```bash
-gradlew clean test aggregate
+.\gradlew clean test 
 
 ```
 
@@ -58,14 +59,13 @@ gradlew clean test aggregate
 
 1. **`clean`**: Elimina reportes y binarios de ejecuciones anteriores para asegurar una prueba limpia.
 2. **`test`**: Ejecuta los escenarios definidos en `src/test/resources/features`.
-3. **`aggregate`**: Recopila los resultados y genera el reporte HTML de Serenity.
 
 ## 📊 Reportes Generados
 
 Al finalizar la ejecución, Serenity BDD genera un reporte detallado con capturas de pantalla de cada paso.
 
-* **Ubicación:** `target/site/serenity/index.html`
-* **Cómo verlo:** Ve a la carpeta del proyecto, navega a la ruta indicada y abre el archivo `index.html` en tu navegador.
+* **Ubicación:** `target/site/serenity/cucumber-reports.html`
+* **Cómo verlo:** Ve a la carpeta del proyecto, navega a la ruta indicada y abre el archivo `cucumber-reports.html` en tu navegador, o desde intellij ir a la carpeta **target** click derecho en cucumber-reports.html abir en **Browser** (Elegir cualquier navegador disponible) , 
 
 ## 📂 Estructura del Proyecto (Screenplay)
 
@@ -74,7 +74,7 @@ El código sigue estrictamente la arquitectura Screenplay:
 ```text
 src/
 ├── main/java/com/nttdata/
-│   ├── tasks/              # Responsabilidades del actor (Login, AddProduct, etc.)
+│   ├── tasks/              # Responsabilidades del actor (Login, AddProduct, CompleteCheckout.)
 │   └── userinterfaces/     # Mapeo de elementos Web (Page Objects / Targets)
 └── test/
     ├── java/com/nttdata/
@@ -89,7 +89,7 @@ src/
 ## 📝 Notas Adicionales
 
 * **Gestión de Drivers:** No es necesario descargar manualmente el `geckodriver`. El proyecto utiliza la librería `WebDriverManager` invocada en el `BeforeClass` del Runner para garantizar la compatibilidad con Firefox.
-* **Datos de Prueba:** Los datos (usuarios, productos) están parametrizados utilizando **Scenario Outlines** en los archivos `.feature`.
+* **Datos de Prueba:** Los datos (usuarios, productos) están parametrizados utilizando **Scenario Outlines** en el archivo `.feature`.
 
 ---
 

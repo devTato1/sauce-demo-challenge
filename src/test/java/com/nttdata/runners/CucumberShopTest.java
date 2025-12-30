@@ -11,13 +11,12 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber-reports/cucumber.json"},
         features = "src/test/resources/features",
         glue = "com.nttdata.glue",
-        tags = "@Exitoso"
+        tags = "@HappyPath"
 )
-public class CucumberShop {
+public class CucumberShopTest {
 
     @BeforeClass
     public static void setup() {
-        // CAMBIO: Usamos firefoxdriver en lugar de chromedriver
         WebDriverManager.firefoxdriver().setup();
     }
 }

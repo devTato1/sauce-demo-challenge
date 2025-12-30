@@ -1,6 +1,6 @@
 Feature: Compra de productos en SauceDemo
 
-  @Exitoso
+  @HappyPath
   Scenario Outline: Compra exitosa validando productos en el carrito
     Given que estoy en la pagina de inicio de SauceDemo
     When inicio sesion con el usuario "<usuario>" y password "<password>"

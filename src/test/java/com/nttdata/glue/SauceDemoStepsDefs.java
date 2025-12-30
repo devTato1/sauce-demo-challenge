@@ -16,10 +16,6 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
-
-// IMPORTANTE: Agrega este import manualmente
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -32,12 +28,11 @@ public class SauceDemoStepsDefs {
 
     @Given("que estoy en la pagina de inicio de SauceDemo")
     public void queEstoyEnLaPaginaDeInicioDeSauceDemo() {
-        theActorCalled("Leonardo").attemptsTo(
+        theActorCalled("Usuario").attemptsTo(
                 Open.url("https://www.saucedemo.com/")
         );
     }
 
-    // ... (El resto de tus métodos se quedan igual) ...
     @When("inicio sesion con el usuario {string} y password {string}")
     public void inicioSesion(String user, String password) {
         theActorInTheSpotlight().attemptsTo(

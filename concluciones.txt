@@ -19,5 +19,7 @@ Asimismo, el uso de WebDriverManager permite una gestión automática del driver
 Las validaciones se realizaron mediante la clase Ensure de Screenplay, lo cual permite generar reportes más legibles y detallados, alineados con las buenas prácticas actuales de Serenity BDD.
 El reporte HTML generado al finalizar la ejecución proporciona evidencia clara de cada paso del flujo, facilitando el análisis de resultados.
 
+La última ejecución registrada en Serenity (30-12-2025 07:42) dejó constancia de que el escenario "Compra exitosa validando productos en el carrito" finalizó en estado SUCCESS sobre Firefox en Windows. El flujo ejercitó el login del usuario standard_user, el agregado de los productos Sauce Labs Backpack y Sauce Labs Bike Light, la validación del carrito, el checkout con los datos Leonardo Reascos 170150 y la verificación del mensaje "Thank you for your order!", respaldado por evidencias paso a paso que confirman la validez funcional del recorrido.
+
 Como mejora futura, el proyecto podría ampliarse incorporando escenarios negativos, validaciones adicionales sobre los datos de compra, ejecución en múltiples navegadores y parametrización de ambientes.
 No obstante, la solución actual cumple de forma correcta y profesional con el alcance solicitado en el challenge.

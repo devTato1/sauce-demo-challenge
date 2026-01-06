@@ -25,7 +25,7 @@ Para ejecutar este proyecto localmente, asegúrate de cumplir con los siguientes
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone git@github.com:devTato1/sauce-demo-challenge.git
+    git clone https://github.com/devTato1/sauce-demo-challenge.git
     ```
 
 2.  **Acceder al directorio:**

@@ -37,11 +37,11 @@ Para ejecutar este proyecto localmente, asegúrate de cumplir con los siguientes
     Ejecuta el comando de Gradle para bajar las librerías necesarias.
     * **Windows:**
         ```bash
-        .\gradlew clean build
+        .\gradlew dependencies
         ```
     * **Mac/Linux:**
         ```bash
-        ./gradlew clean build
+        ./gradlew dependencies
         ```
 
 ## ⚙️ Ejecución de las Pruebas

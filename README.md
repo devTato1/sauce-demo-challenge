@@ -1,10 +1,9 @@
-
-# 🛒 SauceDemo Automation Challenge - E2E
+# SauceDemo Automation Challenge - E2E
 
 Este repositorio contiene la automatización para el flujo de compra End-to-End (E2E) en la tienda virtual **SauceDemo**. 
 El proyecto ha sido implementado utilizando el patrón de diseño **Screenplay** con **Serenity BDD**, **Cucumber** y **Gradle**.
 
-## 🛠️ Stack Tecnológico 
+## Stack Tecnológico 
 
 * **Lenguaje:** Java 17 (Oracle OpenJDK)
 * **Framework:** Serenity BDD (Screenplay Pattern)
@@ -13,7 +12,7 @@ El proyecto ha sido implementado utilizando el patrón de diseño **Screenplay**
 * **Driver Management:** WebDriverManager - *Gestión automática de drivers*
 * **IDE:** IntelliJ IDEA Community/Ultimate
 
-## 📋 Prerrequisitos
+## Prerrequisitos
 
 Para ejecutar este proyecto localmente, asegúrate de cumplir con los siguientes requisitos:
 
@@ -21,7 +20,7 @@ Para ejecutar este proyecto localmente, asegúrate de cumplir con los siguientes
 2.  **Java JDK 17:** Debe estar instalado y configurado en las variables de entorno (`JAVA_HOME`).
 3.  **Navegador:** **Mozilla Firefox** (Debe estar instalado).
 
-## 🚀 Instalación
+## Instalación
 
 1.  **Clonar el repositorio:**
     ```bash
@@ -44,7 +43,7 @@ Para ejecutar este proyecto localmente, asegúrate de cumplir con los siguientes
         ./gradlew dependencies
         ```
 
-## ⚙️ Ejecución de las Pruebas
+## Ejecución de las Pruebas
 
 El proyecto está configurado para ejecutarse en **Firefox** y gestionar automáticamente el `geckodriver`.
 
@@ -55,19 +54,15 @@ Para ejecutar los escenarios de prueba y generar los reportes, corre el siguient
 
 ```
 
-### ¿Qué hace este comando?
-
-1. **`clean`**: Elimina reportes y binarios de ejecuciones anteriores para asegurar una prueba limpia.
-2. **`test`**: Ejecuta los escenarios definidos en `src/test/resources/features`.
-
-## 📊 Reportes Generados
+## Reportes Generados
 
 Al finalizar la ejecución, Serenity BDD genera un reporte detallado con capturas de pantalla de cada paso.
 
 * **Ubicación:** `target/site/serenity/cucumber-reports.html`
-* **Cómo verlo:** Ve a la carpeta del proyecto, navega a la ruta indicada y abre el archivo `cucumber-reports.html` en tu navegador, o desde intellij ir a la carpeta **target** click derecho en cucumber-reports.html abir en **Browser** (Elegir cualquier navegador disponible) , 
+* **Cómo verlo:** Ve a la carpeta del proyecto, navega a la ruta indicada y abre el archivo `cucumber-reports.html` en tu navegador, o desde intellij ir a la carpeta **target** click derecho en cucumber-reports.html abir en **Browser** (Elegir cualquier navegador disponible)
+* **Opcional:** Se puede ver el reporte con capturas de pantalla dentro de la carpeta `target\site\serenity` y encontrar el reporte autogenerado con nombre similar a `96d5f43b43124b6a601dd78ed27f1b3c8c740132372df1528ef76440ce22cdc2`
 
-## 📂 Estructura del Proyecto (Screenplay)
+##  Estructura del Proyecto (Screenplay)
 
 El código sigue estrictamente la arquitectura Screenplay:
 
@@ -86,7 +81,7 @@ src/
 
 ```
 
-## 📝 Notas Adicionales
+##  Notas Adicionales
 
 * **Gestión de Drivers:** No es necesario descargar manualmente el `geckodriver`. El proyecto utiliza la librería `WebDriverManager` invocada en el `BeforeClass` del Runner para garantizar la compatibilidad con Firefox.
 * **Datos de Prueba:** Los datos (usuarios, productos) están parametrizados utilizando **Scenario Outlines** en el archivo `.feature`.
